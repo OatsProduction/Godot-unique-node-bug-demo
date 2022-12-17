@@ -1,0 +1,22 @@
+[gd_scene load_steps=2 format=3 uid="uid://rv7m3qq3bow2"]
+
+[ext_resource type="Script" path="res://TestButton.cs" id="1_jqhj2"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Hud" type="Control" parent="CanvasLayer"]
+unique_name_in_owner = true
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Button" type="Button" parent="."]
+offset_right = 8.0
+offset_bottom = 8.0
+text = "Click me to print()"
+script = ExtResource("1_jqhj2")
+
+[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]
